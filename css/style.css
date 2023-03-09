@@ -23,6 +23,8 @@ body {
     animation: pan-image 120s infinite;
     object-fit: cover;
     background-repeat: no-repeat;
+    transition-duration: 1s;
+    opacity: 0.5;
 }
 
 .container-overlay {
@@ -81,10 +83,11 @@ body {
     transition-duration: 0.5s;
 }
 
-.intro * {
-    transition-duration: 0.5s;
+.intro > * {
+    transition-duration: 1s;
     text-align: center;
     width: 100%;
+    text-shadow: #FFF 1px 0 10px;
 }
 
 .intro h1 {
