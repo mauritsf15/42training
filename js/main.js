@@ -25,20 +25,21 @@ container.addEventListener('click', function(data) {
 })
 
 const image = document.querySelector('.container-image');
-const imageArray = ['bg-ph-1.jpg', 'bg-ph-2.jpg'];
+const imageArray = ['image-one', 'image-two'];
 let currentImage = 0;
 let changingDia = false;
 
 function changeImage() {
-    currentImage++;
-    if (currentImage == imageArray.length) {
-        currentImage = 0;
-    }
     if (changingDia == false) {
         changingDia = true;
         image.style.opacity = '0';
         setTimeout(function() {
-            image.style.backgroundImage = `url(../img/${imageArray[currentImage]})`;
+            image.classList.remove(imageArray[currentImage]);
+            currentImage++;
+            if (currentImage == imageArray.length) {
+                currentImage = 0;
+            }
+            image.classList.add(imageArray[currentImage]);
             image.style.opacity = '0.5';
         }, 1000);
         setTimeout(function() {
