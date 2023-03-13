@@ -115,7 +115,7 @@ body {
         circle at center, white 2px, transparent 3px, transparent 47px
     );
     background-size: 52px 52px;
-    transform: translate(-100px);
+    transform: translateY(-100px);
 }
 
 .container:target .container-overlay {
@@ -154,6 +154,7 @@ hr {
 
 .on-focus a:hover {
     color:rgb(12, 4, 66);
+    text-decoration: underline;
 }
 
 @media only screen and (max-width: 850px) {
