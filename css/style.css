@@ -174,26 +174,6 @@ figure img {
     padding-left: 15px;
 }
 
-@media only screen and (max-width: 850px) {
-    .on-focus {
-        width: 80vw;
-        left: 10vw;
-    }
-
-    .intro {
-        width: 100vw;
-        left: 0;
-    }
-
-    .intro:hover {
-        transform: scale(1.2);
-    }
-
-    .portrait img {
-        width: 50% !important;
-    }
-}
-
 @media only screen and (max-width: 1250px) {
     .inline {
         flex-wrap: wrap;
@@ -222,5 +202,25 @@ figure img {
         padding-top: 15px;
         padding-left: 0px;
         text-align: center;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .on-focus {
+        width: 86vw;
+        left: 7vw;
+    }
+
+    .intro {
+        width: 100vw;
+        left: 0;
+    }
+
+    .intro:hover {
+        transform: scale(1.2);
+    }
+
+    .portrait img {
+        width: 50% !important;
     }
 }
