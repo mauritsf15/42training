@@ -3,10 +3,7 @@ const container = document.querySelector('.container');
 let state = 'outFocus';
 
 container.addEventListener('click', function(data) {
-    if (data.target.parentElement.classList[0] == 'intro' || data.target.classList[0] == 'intro') {
-        window.location.href = "#focus";
-        state = 'inFocus'
-    } else if (
+    if (
         data.target.parentElement.classList[0] == 'inline' 
         || data.target.parentElement.classList[0] == 'on-focus' 
         || data.target.classList[0] == 'on-focus'
@@ -14,11 +11,21 @@ container.addEventListener('click', function(data) {
         || data.target.parentElement.classList[0] == 'right-side' 
         || data.target.parentElement.classList[0] == 'portrait' 
         ) {
-            //
+            window.location.href = "#focus";
+            state = 'inFocus'
     } else {
-        window.location.href = "#";
-        setTimeout(function() {
-            state = 'outFocus'
-        }, 50)
+        if (state == 'outFocus') {
+            window.location.href = "#focus";
+            state = 'inFocus'
+        } else {
+            window.location.href = "#";
+            setTimeout(function() {
+                state = 'outFocus'
+            }, 50)
+        }
+        
     }
 })
+
+// window.location.href = "#focus";
+//         state = 'inFocus'
