@@ -23,15 +23,8 @@ body {
     object-fit: cover;
     background-repeat: no-repeat;
     transition-duration: 1s;
-    opacity: 0.5;
-}
-
-.image-one {
+    opacity: 0.7;
     background-image: url(../img/bg-ph-1.jpg);
-}
-
-.image-two {
-    background-image: url(../img/bg-ph-2.jpg);
 }
 
 .container-overlay {
@@ -94,7 +87,7 @@ body {
     transition-duration: 1s;
     text-align: center;
     width: 100%;
-    text-shadow: #FFF 1px 0 10px;
+    text-shadow: #FFF 1px 0 5px;
 }
 
 .intro h1 {
@@ -116,6 +109,10 @@ body {
     );
     background-size: 52px 52px;
     transform: translateY(-100px);
+    -webkit-transform: translateY(-100px);
+    -moz-transform: translateY(-100px);
+    -ms-transform: translateY(-100px);
+    -o-transform: translateY(-100px);
 }
 
 .container:target .container-overlay {
@@ -142,6 +139,9 @@ hr {
 
 .inline {
     margin: 15px;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
 }
 
 .container:target .on-focus {
@@ -157,6 +157,23 @@ hr {
     text-decoration: underline;
 }
 
+.left-side {
+    flex: 1;
+}
+
+.right-side {
+    flex: 1;
+}
+
+figure img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.portrait {
+    padding-left: 15px;
+}
+
 @media only screen and (max-width: 850px) {
     .on-focus {
         width: 80vw;
@@ -170,5 +187,40 @@ hr {
 
     .intro:hover {
         transform: scale(1.2);
+    }
+
+    .portrait img {
+        width: 50% !important;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .inline {
+        flex-wrap: wrap;
+    }
+
+    .left-side {
+        flex: none;
+        max-width: 100%;
+    }
+    
+    .right-side {
+        flex: none;
+        max-width: 100%;
+    }
+
+    .on-focus {
+        width: 60vw;
+        left: 20vw;
+    }
+
+    .portrait img {
+        width: 30%;
+    }
+
+    .portrait {
+        padding-top: 15px;
+        padding-left: 0px;
+        text-align: center;
     }
 }
