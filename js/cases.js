@@ -1,7 +1,7 @@
 const cases = document.querySelector('.cases');
 const container = document.querySelector('.container');
 
-fetch('../casedata.json')
+fetch('casedata.json')
 .then(myData => myData.json())
 .then(jsonData => useData(jsonData));
 
