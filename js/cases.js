@@ -33,8 +33,15 @@ function useData(jsonData) {
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <img class="img-fluid" src="${jsonData[i].image}" alt="case image">
-                        <h6 class="text-muted"><i class="fa-solid fa-clock"></i> ${jsonData[i].date}<br><i class="fa-solid fa-location-dot"></i> ${jsonData[i].location}</h6>
+                        <div class="row d-flex align-items-center">
+                            <img class="img-fluid modal-img col-md-6" src="${jsonData[i].image}" alt="case image">
+                            <div class="col-md-6">
+                                <h1>${jsonData[i].name}</h1>
+                                <h6 class="text-muted"><i class="fa-solid fa-clock"></i> ${jsonData[i].date}<br>
+                                <i class="fa-solid fa-location-dot"></i> ${jsonData[i].location}</h6>
+                            </div>
+                        </div>
+                        <hr>
                         <p class="modal-text">${jsonData[i].description}</p>
                     </div>
                     <div class="modal-footer">

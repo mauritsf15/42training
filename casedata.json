@@ -3,7 +3,7 @@
         "id": 0,
         "name": "Case 1",
         "short": "Case 1 short",
-        "description": "Big description of Case 1",
+        "description": "Big description of Case 1<br><br>Case 1 was an amazing oppurtunity.<br><br>Did you know this is also scrollable?<br><br><br>Check it out!<br><br><br>Check it out!<br><br><br>Check it out!<br><br><br>Check it out!",
         "image": "img/bg-ph-1.jpg",
         "date": "02/04/23",
         "location": "Addis Abeba, Ethiopia"
